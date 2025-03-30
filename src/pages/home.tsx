@@ -121,11 +121,12 @@ export default function Dashboard() {
                   <p className="text-muted-foreground">Gestiona tus turnos y visualiza tus estadísticas.</p>
                 </div>
                 <div className="flex items-center gap-2">
+                  <DialogTurno></DialogTurno>
 
-                  <Button >
+                 {/*  <Button >
                     <Plus className="mr-2 h-4 w-4" />
                     Nuevo Turno
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
 

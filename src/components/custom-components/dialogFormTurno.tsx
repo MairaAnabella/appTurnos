@@ -22,8 +22,15 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { Input } from "../ui/input";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "../ui/popover"
+import { format } from "date-fns"
+import { CalendarIcon } from "lucide-react"
+import { Calendar } from "../ui/calendar";
 //import { Input } from "../custom-components/input";
 
 // Esquema de validación con Zod
@@ -31,9 +38,11 @@ const formSchema = z.object({
   username: z.string().min(2, {
     message: "El nombre de usuario debe tener al menos 2 caracteres.",
   }),
+  
 });
 
 export function DialogTurno() {
+  
   // Definir el formulario dentro del componente
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -64,8 +73,7 @@ export function DialogTurno() {
             Ingresa los datos y presiona "Guardar".
           </DialogDescription>
         </DialogHeader>
-
-{/*         <Form {...form}>
+        <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
@@ -78,14 +86,20 @@ export function DialogTurno() {
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+
+
+
+
+
+
               )}
             />
             <DialogFooter>
-              {/* ✅ Asegúrate de que este botón esté dentro del formulario *
+     {/*          {*✅ Asegúrate de que este botón esté dentro del formulario *} */}
               <Button type="submit">Guardar</Button>
             </DialogFooter>
           </form>
-        </Form> */}
+        </Form> 
       </DialogContent>
     </Dialog>
   );
