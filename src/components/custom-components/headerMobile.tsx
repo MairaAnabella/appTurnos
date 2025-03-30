@@ -8,10 +8,14 @@ export function Sidebar(){
         <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static lg:h-[60px] lg:px-6">
         <Sheet>
           <SheetTrigger asChild>
+            <span>
             <Button variant="outline" size="icon" >
               <ChevronRight   className="h-5 w-5" />
               <span className="sr-only">Toggle Menu</span>
             </Button>
+
+
+            </span>
           </SheetTrigger>
           <SheetContent side="left" >
             <nav className="grid gap-2  font-medium">

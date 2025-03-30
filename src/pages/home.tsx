@@ -7,9 +7,9 @@ import { Card,CardContent, CardDescription, CardHeader, CardTitle} from "../comp
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { Badge } from "../components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
+//import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select"
 import { Sidebar} from "../components/custom-components/headerMobile"
-
+import { DialogTurno } from "../components/custom-components/dialogFormTurno"
 
 export default function Dashboard() {
   const [date] = useState(new Date())
@@ -107,7 +107,7 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* menu*/}
-      <Sidebar></Sidebar>
+       <Sidebar></Sidebar> 
       <div >
 
 
@@ -122,7 +122,7 @@ export default function Dashboard() {
                 </div>
                 <div className="flex items-center gap-2">
 
-                  <Button>
+                  <Button >
                     <Plus className="mr-2 h-4 w-4" />
                     Nuevo Turno
                   </Button>
